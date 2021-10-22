@@ -1,0 +1,21 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "api-server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.11.1",
+    "cors": "^2.8.5",
+    "express": "~4.16.4",
+    "uid": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.12"
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "field": "taskID",
+    "headerText": "Task ID",
+    "width": 100,
+    "isPrimaryKey": true,
+    "showInColumnChooser": false
+  },
+  {
+    "field": "taskName",
+    "headerText": "Task Name",
+    "editType": "dropDownEdit"
+  },
+  {
+    "field": "duration",
+    "headerText": "Duration",
+    "editType": "numericEdit"
+  },
+  {
+    "field": "approved",
+    "headerText": "Approved",
+    "displayAsCheckBox": true,
+    "editType": "booleanEdit"
+  },
+  {
+    "field": "priority",
+    "headerText": "Priority",
+    "editType": "defaultedit"
+  }
+]
