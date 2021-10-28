@@ -3,13 +3,14 @@ import FileService from "../services/FileService.js";
 import path from "path";
 import { uid } from "uid";
 
-const dataPath = path.resolve(path.resolve(), "data/columns.json");
+const colsPath = path.resolve(path.resolve(), "data/columns.json");
+const rowsPath = path.resolve(path.resolve(), "data/rows.json");
 
 const fileService = new FileService();
 
 class ColumnController {
   getColumns(req, res) {
-    fs.readFile(dataPath, "utf8", (err, data) => {
+    fs.readFile(colsPath, "utf8", (err, data) => {
       if (err) {
         throw err;
       }
@@ -55,9 +56,27 @@ class ColumnController {
           success: true,
           msg: `Col id:${id} removed`,
         });
+        removeProp(id);
       });
     }, true);
   }
+}
+
+function removeProp(id) {
+  fileService.readFile(
+    (rows) => {
+      rows = rows.map((row) => {
+        if (row[id]) {
+          delete row[id];
+        }
+        return row;
+      });
+
+      fileService.writeFile(JSON.stringify(rows, null, 2), () => {}, rowsPath);
+    },
+    true,
+    rowsPath
+  );
 }
 
 export default new ColumnController();

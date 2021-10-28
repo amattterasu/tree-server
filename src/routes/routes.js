@@ -19,5 +19,6 @@ router.delete("/columns/:id", ColumnController.deleteCol);
 router.get("/rows", RowController.getRows);
 router.put("/rows/:id", RowController.updateRow);
 router.post("/rows", RowController.deleteRow);
+router.post("/create-rows", RowController.createRow);
 
 export default router;

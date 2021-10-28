@@ -6,7 +6,8 @@
     "endDate": "1994-08-25T00:00:00Z",
     "priority": "Critical",
     "duration": 41,
-    "isParent": true
+    "isParent": true,
+    "approved": true
   },
   {
     "taskID": 3,
@@ -54,8 +55,9 @@
     "taskName": "Sub Task 11",
     "startDate": "1992-06-07T00:00:00Z",
     "endDate": "1994-08-25T00:00:00Z",
-    "priority": "Normal",
     "duration": 32,
+    "approved": false,
+    "priority": "NormalTest",
     "parentIndex": 5,
     "isParent": false
   },
@@ -84,8 +86,9 @@
     "taskName": "Child Task 17",
     "startDate": "1992-06-07T00:00:00Z",
     "endDate": "1994-08-25T00:00:00Z",
-    "priority": "Low",
     "duration": 8,
+    "approved": false,
+    "priority": "Low",
     "parentIndex": 1,
     "isParent": true
   },
@@ -9611,7 +9614,8 @@
     "endDate": "1994-08-25T00:00:00Z",
     "priority": "Release Breaker",
     "duration": 33,
-    "isParent": true
+    "isParent": true,
+    "approved": true
   },
   {
     "taskID": 1933,
